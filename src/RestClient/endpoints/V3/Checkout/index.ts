@@ -10,7 +10,7 @@ import Checkouts from './Checkouts';
 class CheckoutV3 {
   public checkouts: Checkouts;
   public checkoutBillingAddress: CheckoutBillingAddresses;
-  public checkoutConsegnments: CheckoutConsignments;
+  public checkoutConsignments: CheckoutConsignments;
   public checkoutCoupons: CheckoutCoupons;
   public checkoutDiscounts: CheckoutDiscounts;
   public checkoutOrders: CheckoutOrders;
@@ -18,7 +18,7 @@ class CheckoutV3 {
   constructor(client: AxiosInstance) {
     this.checkouts = new Checkouts(client);
     this.checkoutBillingAddress = new CheckoutBillingAddresses(client);
-    this.checkoutConsegnments = new CheckoutConsignments(client);
+    this.checkoutConsignments = new CheckoutConsignments(client);
     this.checkoutCoupons = new CheckoutCoupons(client);
     this.checkoutDiscounts = new CheckoutDiscounts(client);
     this.checkoutOrders = new CheckoutOrders(client);
