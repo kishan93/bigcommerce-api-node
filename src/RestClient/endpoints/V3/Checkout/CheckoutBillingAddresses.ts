@@ -4,7 +4,7 @@ import { getCheckoutsPath } from './Checkouts';
 import type { CheckoutBillingAddress } from './types';
 
 export const getCheckoutBillingAddressPath = (checkoutId: string, id?: string): string =>
-  id ? `${getCheckoutsPath(checkoutId)}/billing-addresses/${id}` : `${getCheckoutsPath(checkoutId)}/billing-addresses`;
+  id ? `${getCheckoutsPath(checkoutId)}/billing-address/${id}` : `${getCheckoutsPath(checkoutId)}/billing-address`;
 
 export class CheckoutBillingAddresses {
   private client: AxiosInstance;

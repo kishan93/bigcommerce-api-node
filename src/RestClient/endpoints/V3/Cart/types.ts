@@ -3,20 +3,24 @@ import { AxiosPromise } from '../../../../types';
 
 export interface Cart {
   CreateRequest: operations['createACart']['requestBody']['content']['application/json'];
-  CreateResponse: AxiosPromise<operations['createACart']['responses']['201']['content']['application/json']>;
+  CreateResponse: AxiosPromise<{ data?: operations['createACart']['responses']['201']['content']['application/json'] }>;
   GetRequest: operations['getACart']['parameters']['path'];
-  GetResponse: AxiosPromise<operations['getACart']['responses']['200']['content']['application/json']>;
+  GetResponse: AxiosPromise<{ data?: operations['getACart']['responses']['200']['content']['application/json'] }>;
   DeleteRequest: operations['deleteACart']['parameters']['path'];
-  DeleteResponse: AxiosPromise<operations['deleteACart']['responses']['204']['content']['application/json']>;
+  DeleteResponse: AxiosPromise<operations['deleteACart']['responses']['204']>;
 }
 
 export interface CartLineItem {
   CreateRequest: operations['addCartLineItem']['requestBody']['content']['application/json'];
-  CreateResponse: AxiosPromise<operations['addCartLineItem']['responses']['201']['content']['application/json']>;
+  CreateResponse: AxiosPromise<{
+    data?: operations['addCartLineItem']['responses']['201']['content']['application/json'];
+  }>;
   UpdateRequest: operations['updateCartLineItem']['requestBody']['content']['application/json'];
-  UpdateResponse: AxiosPromise<operations['updateCartLineItem']['responses']['200']['content']['application/json']>;
+  UpdateResponse: AxiosPromise<{
+    data?: operations['updateCartLineItem']['responses']['200']['content']['application/json'];
+  }>;
   DeleteRequest: operations['deleteCartLineItem']['parameters']['path'];
-  DeleteResponse: AxiosPromise<operations['deleteCartLineItem']['responses']['204']['content']['application/json']>;
+  DeleteResponse: AxiosPromise<operations['deleteCartLineItem']['responses']['204']>;
 }
 
 export interface CartMetaField {

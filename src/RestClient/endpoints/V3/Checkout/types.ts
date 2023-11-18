@@ -19,6 +19,8 @@ export interface CheckoutBillingAddress {
 }
 
 export interface CheckoutConsignment {
+  RequestPrarams: operations['CheckoutsConsignmentsByCheckoutIdPost']['parameters']['query'];
+
   CreateRequest: operations['CheckoutsConsignmentsByCheckoutIdPost']['requestBody']['content']['application/json'];
   CreateResponse: AxiosPromise<
     operations['CheckoutsConsignmentsByCheckoutIdPost']['responses']['200']['content']['application/json']
