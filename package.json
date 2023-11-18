@@ -1,6 +1,6 @@
 {
-  "name": "@bigcommerce/api-nodejs",
-  "version": "0.1.2-alpha",
+  "name": "@kishan93/bigcommerce-nodejs",
+  "version": "0.1.18-alpha",
   "author": "BigCommerce",
   "license": "MIT",
   "description": "A node module for authentication and communication with the BigCommerce API",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bigcommerce/bigcommerce-api-node.git"
+    "url": "https://github.com/kishan93/bigcommerce-api-node.git"
   },
   "dependencies": {
     "axios": "^0.27.2",
