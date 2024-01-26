@@ -1,6 +1,6 @@
 {
   "name": "@kishan93/bigcommerce-nodejs",
-  "version": "0.1.18-alpha",
+  "version": "0.1.24-test",
   "author": "BigCommerce",
   "license": "MIT",
   "description": "A node module for authentication and communication with the BigCommerce API",
@@ -13,7 +13,6 @@
     "npm": ">=7"
   },
   "scripts": {
-    "postinstall": "npm run generate && tsc",
     "build": "tsc",
     "lint": "eslint --fix --max-warnings 0 src/**/*.ts",
     "test": "jest --coverage",

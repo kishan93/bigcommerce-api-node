@@ -407,7 +407,10 @@ export interface Variant {
 }
 
 export interface Product {
-  ListFilters: productsOperations['getProducts']['parameters']['query'];
+  ListFilters: { include?: string } & Omit<
+    productsOperations['getProducts']['parameters']['query'] & { include?: string },
+    'include'
+  >;
   ListResponse: AxiosPromise<productsOperations['getProducts']['responses']['200']['content']['application/json']>;
   UpdateBatchRequest: productsOperations['updateProducts']['requestBody']['content']['application/json'];
   UpdateBatchFilters: productsOperations['updateProducts']['parameters']['query'];
@@ -418,8 +421,8 @@ export interface Product {
   CreateFilters: productsOperations['createProduct']['parameters']['query'];
   CreateResponse: AxiosPromise<productsOperations['createProduct']['responses']['200']['content']['application/json']>;
   DeleteManyFilters: productsOperations['deleteProducts']['parameters']['query'];
-  GetFilters: productsOperations['getProducts']['parameters']['query'];
-  GetResponse: AxiosPromise<productsOperations['getProducts']['responses']['200']['content']['application/json']>;
+  GetFilters: { include?: string } & Omit<productsOperations['getProducts']['parameters']['query'], 'include'>;
+  GetResponse: AxiosPromise<productsOperations['getProductById']['responses']['200']['content']['application/json']>;
   UpdateRequest: productsOperations['updateProducts']['requestBody']['content']['application/json'];
   UpdateFilters: productsOperations['updateProducts']['parameters']['query'];
   UpdateResponse: AxiosPromise<productsOperations['updateProducts']['responses']['200']['content']['application/json']>;
